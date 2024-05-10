@@ -1,0 +1,17 @@
+2.  Features of HTML
+
+platform independent
+hyper-text can be added to the text.
+image , video and audio can be added to webpage.
+
+
+3.   MIME - multipurpose internet mail extensions.
+Transferring different types of data through electronic mail services.
+
+4.  HTML- Hyper-Text Markup language.
+Specially designed text for web-browser.
+
+
+5.  Void Element
+It is an element that doesnt have any content and cant have child node.
+ex- <br/> <img src/>
