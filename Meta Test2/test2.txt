@@ -1,0 +1,15 @@
+1.  what is  CSS?
+what are the different types of selectors in CSS?
+CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in HTML or XML
+types of selectors are Class Selectors , Grouping Selectors, Tag Selectors, ID selectors
+
+
+2.CSS Box Model
+It is Functional concept that defines how the element dimension and spacing are calculated.
+
+
+4. List types in HTML
+Ordered , Unordered, Definition
+
+
+3.Student Registration Form
