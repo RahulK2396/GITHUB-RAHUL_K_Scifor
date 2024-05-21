@@ -1,0 +1,35 @@
+
+<html >
+<head>
+<title>Custom Bullets in List</title>
+<style>
+  ul.custom-bullets {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul.custom-bullets li::before {
+    content: '✔'; 
+    color: red;
+    font-size: 20px; 
+    margin-right: 10px; 
+  }
+  
+  ul.custom-bullets li {
+    margin-bottom: 5px; /* Space between each list item */
+  }
+</style>
+</head>
+<body>
+
+<h2>Grocery List</h2>
+<ul class="custom-bullets">
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Carrots</li>
+  <li>Bread</li>
+  <li>Milk</li>
+</ul>
+
+</body>
+</html>
