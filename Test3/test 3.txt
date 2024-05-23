@@ -1,0 +1,19 @@
+1. what are the various formatting tag  in html.
+text formatting tag.
+paragraph and heading tag.
+table tag.
+image tag.
+form tag.
+
+
+
+
+3.cell spacing different from cell padding
+Cell spacing refers to the distance between the cells and cell padding refers to the space around each cell.
+
+4.what are semantic elements
+semantic element clearly describes its meaning to us. 
+like <header> , <footer>, <table>
+
+6.what is the alt attribute in html?
+The alt attribute provides alternative information for an image.
