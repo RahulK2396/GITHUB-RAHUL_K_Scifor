@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="registrationForm">
+            <h2 class="heading">Register</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Interests</label>
+                <div class="gender">
+                   
+                        <label><input type="checkbox" name="interests" value="Reading"> Reading</label>
+                        <label><input type="checkbox" name="interests" value="Traveling"> Traveling</label>
+                  
+                        <label><input type="checkbox" name="interests" value="Cooking"> Cooking</label>
+                        <label><input type="checkbox" name="interests" value="Sports"> Sports</label>
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
