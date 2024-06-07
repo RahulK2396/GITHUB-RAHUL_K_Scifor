@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Form</title>
+    <style>
+        .custom-gradient-bg {
+            background: linear-gradient(45deg, #3c0303, #000204);
+        }
+
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+            border-radius: 20px; /* Adjust border-radius as needed */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Shadow effect */
+        }
+    </style>
+</head>
+<body class="bg-dark d-flex custom-gradient-bg justify-content-center align-items-center vh-100">
+
+    <div class="glass-card card text-white" style="max-width: 400px; width: 100%; padding: 20px;">
+        <h2 class="text-center">Form</h2>
+        <form class="needs-validation" novalidate>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" required minlength="4">
+                <div class="invalid-feedback">
+                    Please enter your first name (at least 4 characters).
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required minlength="8">
+                <div class="invalid-feedback">
+                    Please enter a password (at least 8 characters).
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Sign in">
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
