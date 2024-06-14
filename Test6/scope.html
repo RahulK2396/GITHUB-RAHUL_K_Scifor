@@ -1,0 +1,35 @@
+
+<html >
+<head>
+   
+    <title>Scope Demo</title>
+    <script>
+        
+        var varVariable = "var variable";
+        let letVariable = "let variable";
+        const constVariable = "const variable";
+
+        function scopeDemo() {
+            var varFunctionScope = "declared with var inside a function";
+
+            var varBlockScope = " var inside a function scope";
+            let letBlockScope = " let inside a function scope";
+
+            document.writeln(letBlockScope + '<br>'); 
+
+            document.writeln(varBlockScope + '<br>'); 
+
+            document.writeln(varFunctionScope + '<br>'); 
+        }
+
+        scopeDemo();
+
+        document.writeln(varVariable + '<br>'); 
+        document.writeln(letVariable + '<br>'); 
+        document.writeln(constVariable + '<br>');
+       
+    </script>
+</head>
+<body>
+</body>
+</html>
