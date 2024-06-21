@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Printing Numbers 1 to 10</title>
+    <script>
+        function printNumbers() {
+            let result = "";
+            for (let i = 1; i <= 10; i++) {
+                result += i + "<br>";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body onload="printNumbers()">
+    <h3>Numbers from 1 to 10</h3>
+    <h1 id="result"></h1>
+</body>
+</html>
