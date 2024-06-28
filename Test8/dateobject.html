@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Date as Object</title>
+        
+    </head>
+    <body>
+      
+        <p id="result"></p>
+        <p>Current Month</p>
+        <p id="curentmonth"></p>
+        <p id="setMonth"></p>
+        <p id="setDate"></p>
+        <p id="fullYear"></p>
+        <script>
+
+                var date = new Date();
+                document.getElementById("result").innerHTML = date;
+                console.log(date);
+                document.getElementById("curentmonth" ).innerHTML = date.getMonth()+1;
+                let newMonth = date.setMonth(4)
+                document.getElementById("setMonth" ).innerHTML =date ;
+                date.setDate(15)
+
+                document.getElementById('setDate').innerHTML = date
+                date.setDate(15)
+                document.getElementById('fullYear').innerHTML = date.getFullYear()
+
+
+
+               
+            
+        </script>
+    </body>
+</html>

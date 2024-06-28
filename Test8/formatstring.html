@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Format String</title>
+</head>
+<body>
+    <h1>Enter a String</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string">
+    <button onclick="processString()">Format String</button>
+
+    <h2>Formatted Results:</h2>
+    <p>Uppercase: <span id="uppercase"></span></p>
+    <p>Lowercase: <span id="lowercase"></span></p>
+    <p>Substring (Index 2 to 5): <span id="substring"></span></p>
+
+    <script>
+        function formatString(inputString) {
+           
+            let upperCaseString = inputString.toUpperCase();
+
+       
+            let lowerCaseString = inputString.toLowerCase();
+
+            let subString = inputString.substring(2, 6);
+
+            return {
+                upperCase: upperCaseString,
+                lowerCase: lowerCaseString,
+                subString: subString
+            };
+        }
+
+        function processString() {
+     
+            let inputString = document.getElementById('stringInput').value;
+
+       
+            let result = formatString(inputString);
+
+       
+            document.getElementById('uppercase').textContent = result.upperCase;
+            document.getElementById('lowercase').textContent = result.lowerCase;
+            document.getElementById('substring').textContent = result.subString;
+        }
+    </script>
+</body>
+</html>

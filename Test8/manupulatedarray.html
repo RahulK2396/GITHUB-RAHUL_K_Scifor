@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulate Array</title>
+</head>
+<body>
+    <h1>Enter Strings (comma separated)</h1>
+    <input type="text" id="arrayInput" placeholder="Enter strings separated by commas">
+    <button onclick="processArray()">Manipulate Array</button>
+    <p> After adding volvo to the exisiting array</p>
+    <p id="PushVolvo"></p>
+
+    <p> Remove last element</p>
+    <p id="PopVolvo"></p>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script>
+        function manipulateArray(array) {
+            array.push("VOLVO");
+           document.getElementById('PushVolvo').innerHTML = array;
+
+            array.pop();
+            document.getElementById('PopVolvo').innerHTML = array;
+            let upperCaseArray = array.map(element => element.toUpperCase());
+            let joinedString = upperCaseArray.join(',');
+            return joinedString;
+        }
+
+        function processArray() {
+          
+            let inputString = document.getElementById('arrayInput').value;
+            let array = inputString.split(',');
+
+            array = array.map(element => element.trim());
+
+            let result = manipulateArray(array);
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
