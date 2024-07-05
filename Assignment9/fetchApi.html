@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<title>AJAX and Fetch API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #data {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+
+            text-align: left;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            
+        }
+
+        th {
+            background-color: #569ab9;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Load Data using AJAX and Fetch API</h1>
+        <!-- load data using AJAX -->
+        <button onclick="loadDataAJAX()">Load Data with AJAX</button>
+        <!-- load data using Fetch API -->
+        <button onclick="loadDataFetch()">Load Data with Fetch API</button>
+        <!-- Div to display the loaded data -->
+        <div id="data">No Data Available now</div>
+    </div>
+
+    <script>
+        // load data using AJAX
+        function loadDataAJAX() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://dummyjson.com/products", true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    displayData(data.products);
+                } else {
+                    document.getElementById("data").innerText = "Error loading data";
+                }
+            };
+            xhr.send();
+        }
+
+        // load data using Fetch API
+        function loadDataFetch() {
+            fetch('https://dummyjson.com/users')
+                .then(response => response.json())
+                .then(data => {
+                    displayusersData(data.users);
+                })
+                .catch(error => {
+                    document.getElementById("data").innerText = "Error loading data";
+                });
+        }
+
+        //  display data in a table (AJAX)
+        function displayData(products) {
+            let table = `<table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                        </tr>`;
+            products.forEach(product => {
+                table += `<tr>
+                        <td>${product.id}</td>
+                        <td>${product.title}</td>
+                        <td>${product.price}</td>
+                        <td>${product.description}</td>
+                      </tr>`;
+            });
+            table += `</table>`;
+            document.getElementById("data").innerHTML = table;
+        }
+        function displayusersData(users) {
+            let table = `<table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Department</th>
+                            <th>Gender</th>
+                        </tr>`;
+            users.forEach(users => {
+                table += `<tr>
+                        <td>${users.firstName}</td>
+                        <td>${users.address.address}</td>
+                        <td>${users.company.department}</td>
+                        <td>${users.gender}</td>
+                      </tr>`;
+            });
+            table += `</table>`;
+            document.getElementById("data").innerHTML = table;
+        }
+    </script>
+
+</body>
+
+</html>
